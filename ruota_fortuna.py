@@ -282,6 +282,7 @@ while True:
                                     stri=stri[:y]+indovina[y]+stri[y+1:]
                                     cont+=1
                                     
+                                    
                 if turno%2==1 and cont!=0:
                     
                     soldip1=soldip1+ruota[g]*cont
@@ -370,13 +371,14 @@ while True:
         t.clear()
         t.teleport(-300,100)
         if turno%2==1:
-            t.write("MANNAGGIA HAI VINTO "+ str(soldip1+500)+" Euro",move=False, font=('monaco',30,'bold'),align='left')
+            t.write("MANNAGGIA HAI VINTO "+ str(soldip1+20000)+" Euro",move=False, font=('monaco',30,'bold'),align='left')
             t.done()
             break
         else:
-            t.write("MANNAGGIA HAI VINTO "+ str(soldip2+500)+ " Euro",move=False, font=('monaco',30,'bold'),align='left')
+            t.write("MANNAGGIA HAI VINTO "+ str(soldip2+20000)+ " Euro",move=False, font=('monaco',30,'bold'),align='left')
             t.done()
             break
+        
             
             
             
