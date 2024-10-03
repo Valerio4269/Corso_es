@@ -8,7 +8,7 @@ nomep2=""
 t.hideturtle()
 t.bgcolor("orange")
 t.color("white")
-t.setup(1920,1080)
+t.setup(1920,1080) 
 def disegna(t,soldip1,soldip2,turno):
     global nomep1
     global nomep2
