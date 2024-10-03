@@ -126,12 +126,12 @@ campo=[[7,7,7,7,7,7,7],[7,2,0,0,7,7,7],[3,0,0,0,4,7,7,7],[7,5,0,0,7,7,7],[7,7,7,
 turno=1
 
 while True:
-        print("\033[0;31mTURNO", turno,"\033[0;36m ")
+        print("\033[1;31mTURNO", turno,"\033[0;36m ")
         
         if turno%2==1:
-            print("\033[0;31mTURNO GIOCATORE 1\033[0;36m")
+            print("\033[1;31mTURNO GIOCATORE 1\033[0;36m")
         else:
-            print("\033[0;31mTURNO GIOCATORE 2\033[0;36m")
+            print("\033[1;31mTURNO GIOCATORE 2\033[0;36m")
         
         
         
@@ -143,7 +143,7 @@ while True:
     
         
         if turno%2==1:
-            scelta=int(input("Inserisci quale dei lupi spostare: (1-Celeste, 2-Viola, 3-Giallo) "))
+            scelta=int(input("\033[1;36mInserisci quale dei lupi spostare: (1-Celeste, 2-Viola, 3-Giallo) "))
            
                 
          
@@ -221,10 +221,10 @@ while True:
         else: 
             pos=controllo_pos(turno,scelta,campo)
             if  campo[pos[0]][pos[1]-1]!=0  and campo[pos[0]-1][pos[1]]!=0 and campo[pos[0]-1][pos[1]]!=0 and campo[pos[0]+1][pos[-1]]!=0  and campo[pos[0]+1][pos[1]]!=0 and campo[pos[0]+1][pos[1]]!=0  and campo[pos[0]+1][pos[1]+1]!=0 and campo[pos[0]-1][pos[1]+1]!=0  and campo[pos[0]+1][pos[1]]!=0 and campo[pos[0]+1][pos[1]]!=0  and campo[pos[0]-1][pos[1]-1]!=0  and campo[pos[0]+1][pos[1]+1]!=0  and campo[pos[0]][pos[1]+1]!=0:
-                print("\033[0;31mIL GIOCATORE 1 HA VINTO ")
+                print("\033[1;31mIL GIOCATORE 1 HA VINTO ")
                 break
             
-            mossa=input("Inserisci una mossa :  w,a,s,d,e,x,r,v ")
+            mossa=input("\033[1;36mInserisci una mossa :  w,a,s,d,e,x,r,v ")
             
             while mossa!="w" and mossa!="a" and mossa!="s" and mossa!="d" and mossa!="e" and mossa!="x" and mossa!="r" and mossa!="v":
                 mossa=input("Inserisci una mossa valida :  w,a,s,d,e,x,r,v  ")
@@ -298,7 +298,7 @@ while True:
             
         disegna_campo(campo)
         if controllo_pos(1,1,campo)[1]>= controllo_pos(2,1,campo)[1] and controllo_pos(1,2,campo)[1]>=controllo_pos(2,1,campo)[1] and controllo_pos(1,3,campo)[1]>=controllo_pos(2,1,campo)[1]:
-                print("\033[0;31mIL GIOCATORE 2 HA VINTO")
+                print("\033[1;31mIL GIOCATORE 2 HA VINTO")
                 break
         
         
